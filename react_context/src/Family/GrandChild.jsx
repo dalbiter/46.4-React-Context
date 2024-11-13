@@ -1,11 +1,11 @@
 import React from 'react';
 import GreatGrandChild from './GreatGrandChild';
 
-function GrandChild({ count, addToCount }) {
+function GrandChild() {
     return (
         <div style={{ border: '4px solid #39CCCC', margin: '1rem' }}>
             <p>I'm the grandchild!</p>
-            <GreatGrandChild count={count} addToCount={addToCount} />
+            <GreatGrandChild  />
         </div>
     )
 };
