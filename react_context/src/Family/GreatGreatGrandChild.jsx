@@ -1,13 +1,15 @@
 import React, { useContext } from 'react';
 import Countcontext from './CountContext';
+import ThemeContext from '../ThemeContext';
 
 function GreatGreatGrandChild() {
-    const count = useContext(Countcontext)
+    const { count, increment } = useContext(Countcontext)
+    const color = useContext(ThemeContext)
     return (
         <div style={{ border: '4px solid yellowgreen', margin: '1rem' }}>
             <p>I'm the great-great-grandchild!</p>
             <p>I also consume count : {count}</p>
-            {/* <button onClick={addToCount}>Increment Count</button> */}
+            <button style={{color}} onClick={increment}>Increment Count</button>
         </div>
     )
 };
