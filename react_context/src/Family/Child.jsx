@@ -5,7 +5,7 @@ import ThemeContext from '../ThemeContext';
 
 function Child() {
     const [count, setCount] = useState(0)
-    const color = useContext(ThemeContext)
+    const { color } = useContext(ThemeContext)
     const increment = () => {
         setCount(count => count + 1)
     }

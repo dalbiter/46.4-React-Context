@@ -4,12 +4,12 @@ import ThemeContext from '../ThemeContext';
 
 function GreatGreatGrandChild() {
     const { count, increment } = useContext(Countcontext)
-    const color = useContext(ThemeContext)
+    const { color } = useContext(ThemeContext)
     return (
         <div style={{ border: '4px solid yellowgreen', margin: '1rem' }}>
             <p>I'm the great-great-grandchild!</p>
             <p>I also consume count : {count}</p>
-            <button style={{color}} onClick={increment}>Increment Count</button>
+            <button style={{ color }} onClick={increment}>Increment Count</button>
         </div>
     )
 };

@@ -3,10 +3,11 @@ import ThemeContext from './ThemeContext';
 
 const NavBar = () => {
 
-    const backgroundColor = useContext(ThemeContext)
+    const { color, toggleColor } = useContext(ThemeContext)
     return (
-        <nav style={{ backgroundColor }}>
-            <span>Website</span>
+        <nav style={{ color }}>
+            <span>Website </span>
+            <button onClick={toggleColor}>Toggle Theme</button>
         </nav>
     )
 };
